@@ -31,4 +31,5 @@
 1. Delete vk/yandex
 2. Removed sensitive files
 3. Refactor FileUtil
-4. To H2 tests in memory
+4. To H2 tests in memory 
+5. Tests for ProfileResetController
