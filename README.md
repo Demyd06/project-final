@@ -28,4 +28,6 @@
 
 Список выполненных задач:
 ...
-Delete vk/yandex
+1. Delete vk/yandex
+2. Removed sensitive files
+3. Refactor FileUtil
