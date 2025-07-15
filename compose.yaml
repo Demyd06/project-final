@@ -3,14 +3,20 @@ version: '3.8'
 services:
   postgres-db:
     image: postgres:latest
-    container_name: postgres-db
+    container_name: postgres-db-test
     ports:
       - "5432:5432"
     environment:
-      POSTGRES_USER: jira
-      POSTGRES_PASSWORD: JiraRush
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 
     volumes:
       - db-data:/var/lib/postgresql/data
+    command:
+      # each of these must be a separate array item:
+      - "-c"
+      - "log_connections=on"
+      - "-c"
+      - "log_disconnections=on"
     restart: unless-stopped
 
 volumes:
